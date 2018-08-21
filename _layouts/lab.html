@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% assign lab = site.data.labs[page.lab_id] %} {% assign tasks = lab.tasks | sort:"difficult" %}
+<h2>
+    {{lab.title}}
+</h2>
+
+{{content}}

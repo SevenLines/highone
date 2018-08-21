@@ -1,0 +1,54 @@
+--- 
+layout: lab 
+lab_id: first 
+---
+
+{% assign lab = site.data.labs[page.lab_id] %} {% assign tasks = lab.tasks | sort:"difficult"%}
+{% capture recommends %}{% include_relative recommendations/first_recommends.md %}{% endcapture %}
+
+<nav>
+    <div class="nav nav-tabs">
+        <a class="nav-item nav-link" data-toggle="tab" href="#nav-task" role="tab">Задание</a>
+        <a class="nav-item nav-link" data-toggle="tab" href="#nav-home" role="tab">Рекомендации</a>
+        <a class="nav-item nav-link active" data-toggle="tab" href="#nav-tasks-a" role="tab">Группа задач А</a>
+        <a class="nav-item nav-link " data-toggle="tab" href="#nav-tasks-b" role="tab">Группа задач B</a>
+        <a class="nav-item nav-link " data-toggle="tab" href="#nav-tasks-c" role="tab">Группа задач С</a>
+    </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane" id="nav-task" role="tabpanel">
+        {{ lab.description }}
+    </div>
+    <div class="tab-pane  show" id="nav-home" role="tabpanel">
+        {{ recommends | markdownify }}
+    </div>
+    <div class="tab-pane show active" id="nav-tasks-a" role="tabpanel">
+        <div class="tasks-list">
+            {% for task in tasks %} {% if task.category == 'A' %}
+            <div class="tasks-item tasks-item-difficulty-{{task.difficult}}">
+                <div class="tasks-item-index"><div>{{forloop.index}}</div></div>
+                <div class="tasks-item-description">{{task.description}}</div>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+    </div>
+    <div class="tab-pane" id="nav-tasks-b" role="tabpanel">
+        <ol>
+            {% for task in tasks %} {% if task.category == 'B' %}
+            <li>
+                {{task.description}}
+            </li>
+            {% endif %} {% endfor %}
+        </ol>
+    </div>
+    <div class="tab-pane" id="nav-tasks-c" role="tabpanel">
+        <ol>
+            {% for task in tasks %} {% if task.category == 'C' %}
+            <li>
+                {{task.description}}
+            </li>
+            {% endif %} {% endfor %}
+        </ol>
+    </div>
+</div>

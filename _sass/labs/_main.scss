@@ -1,0 +1,55 @@
+@mixin task($color) {
+    background-color: $color;
+    box-shadow: 0 0 6px lighten($color, 3);
+
+    &:hover {
+        background-color: lighten($color, 3);
+        .tasks-item-index {
+            background-color: lighten($color, 8);
+        }
+    }
+
+    .tasks-item-index {
+        background-color: lighten($color, 5);
+        border-right: 2px solid darken($color, 5);
+    }
+}
+
+.tasks-list {
+    .tasks-item {
+        margin: 0.5em 0;
+        display: flex;
+        align-content: stretch;
+
+        transition: all 0.3s;
+
+        .tasks-item-index {
+            transition: all 0.3s;
+            padding: 0.5em;
+            flex-shrink: 0;
+            flex-basis: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tasks-item-description {
+            transition: all 0.3s;
+            padding: 0.75em;
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        &.tasks-item-difficulty-1 {
+            @include task(rgb(217, 255, 160));
+        }
+
+        &.tasks-item-difficulty-2 {
+            @include task(rgb(255, 238, 164));
+        }
+
+        &.tasks-item-difficulty-3 {
+            @include task(rgb(255, 210, 226));
+        }
+    }
+}
