@@ -11,3 +11,69 @@ layout: default
 {{lab.description}}
 </div>
 {{content}}
+
+{% assign lab = site.data.labs[page.lab_id] %} {% assign tasks = lab.tasks | sort:"difficult"%}
+{% capture recommends %}{% include_relative recommendations/first_recommends.md %}{% endcapture %}
+
+<nav>
+    <div class="nav nav-tabs" id="tabs">
+        <a class="nav-item nav-link" data-toggle="tab" href="#nav-home" role="tab">Рекомендации</a>
+        
+        {% if lab.categories.size > 1 %}
+            {% for category in lab.categories %}
+                <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks-{{category}}" role="tab">
+                Группа задач {{category}}</a>
+            {% endfor %}
+        {% elsif lab.categories.size == 1 %}
+            <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks-{{lab.categories[0]}}" role="tab">Задачи</a>
+        {% else %}
+            <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks" role="tab">Задачи</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="tab-content" >
+    <div class="tab-pane" id="nav-home" role="tabpanel">
+        {{ recommends | markdownify }} 
+    </div>
+{% if lab.categories.size > 0 %}
+    {% for category in lab.categories %}
+        <div class="tab-pane" id="nav-tasks-{{category}}" role="tabpanel">
+            <div class="tasks-list">
+                {% assign tasks_category = tasks | where: "category", category %}
+                {% for task in tasks_category %}
+                <div class="tasks-item tasks-item-difficulty-{{task.difficult}}">
+                    <div class="tasks-item-index"><div>{{forloop.index}}</div></div>
+                    <div class="tasks-item-description">{{task.description | markdownify}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="tab-pane" id="nav-tasks" role="tabpanel">
+        <div class="tasks-list">
+            {% for task in tasks %}
+            <div class="tasks-item tasks-item-difficulty-{{task.difficult}}">
+                <div class="tasks-item-index"><div>{{forloop.index}}</div></div>
+                <div class="tasks-item-description">{{task.description | markdownify}}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+</div>
+
+<script>
+    let tabs = $("#tabs a");
+    let index = Cookies.get('tabIndex');
+    if (index == null) {
+        index = 0;
+    }
+    $(tabs[index]).tab('show')
+
+    tabs.on("show.bs.tab", function(e) {
+        let index = tabs.index(e.target);
+        Cookies.set('tabIndex', index, { expires: 365, path: '' })
+    })
+</script>
