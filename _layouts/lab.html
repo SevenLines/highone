@@ -17,8 +17,6 @@ layout: default
 
 <nav>
     <div class="nav nav-tabs" id="tabs">
-        <a class="nav-item nav-link" data-toggle="tab" href="#nav-home" role="tab">Рекомендации</a>
-        
         {% if lab.categories.size > 1 %}
             {% for category in lab.categories %}
                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks-{{category}}" role="tab">
@@ -33,9 +31,6 @@ layout: default
 </nav>
 
 <div class="tab-content" >
-    <div class="tab-pane" id="nav-home" role="tabpanel">
-        {{ recommends | markdownify }} 
-    </div>
 {% if lab.categories.size > 0 %}
     {% for category in lab.categories %}
         <div class="tab-pane" id="nav-tasks-{{category}}" role="tabpanel">
