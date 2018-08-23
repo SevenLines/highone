@@ -16,7 +16,7 @@ layout: default
 {% capture recommends %}{% include_relative recommendations/first_recommends.md %}{% endcapture %}
 
 <nav>
-    <div class="nav nav-tabs" id="tabs">
+    <div class="nav nav-pills" id="tabs">
         {% if lab.categories.size > 1 %}
             {% for category in lab.categories %}
                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks-{{category}}" role="tab">

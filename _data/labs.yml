@@ -61,7 +61,9 @@ first:
 
         $$
           X = \frac{C_1 \times B_2 - C_2 \times B_1}{A_1 \times B_2 - A_2 \times B_1}
-          \quad
+        $$
+
+        $$
           Y = \frac{A_1 \times C_2 - A_2 \times C_1}{A_1 \times B_2 - A_2 \times B_1}
         $$
       difficult: 3
@@ -77,7 +79,9 @@ first:
 
         $$
         X_{1,2} = \pm\sqrt{\frac{-B+\sqrt{B^2 - 4AC}}{2A}}
-        \quad
+        $$
+        
+        $$
         X_{3,4} = \pm\sqrt{\frac{-B-\sqrt{B^2 - 4AC}}{2A}}
         $$
 

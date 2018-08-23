@@ -61,3 +61,24 @@
         }
     }
 }
+
+
+body {
+    min-height: auto;
+    padding-top: 4.5rem;
+}
+  
+.navbar-expand-md>.container {
+}
+
+
+@media (max-width: 600px)
+{
+    
+    h1 {
+        font-size: 1.75em;
+    }
+    .post-list-heading {
+        font-size: 1.5em;
+    }
+}
