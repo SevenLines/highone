@@ -19,11 +19,11 @@ layout: default
     <div class="nav nav-pills" id="tabs">
         {% if lab.categories.size > 1 %}
             {% for category in lab.categories %}
-                <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks-{{category}}" role="tab">
-                Группа задач {{category}}</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks-{{forloop.index0}}" role="tab">
+                {{category}}</a>
             {% endfor %}
         {% elsif lab.categories.size == 1 %}
-            <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks-{{lab.categories[0]}}" role="tab">Задачи</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks-{{0}}" role="tab">Задачи</a>
         {% else %}
             <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks" role="tab">Задачи</a>
         {% endif %}
@@ -33,9 +33,9 @@ layout: default
 <div class="tab-content" >
 {% if lab.categories.size > 0 %}
     {% for category in lab.categories %}
-        <div class="tab-pane" id="nav-tasks-{{category}}" role="tabpanel">
+        <div class="tab-pane" id="nav-tasks-{{forloop.index0}}" role="tabpanel">
             <div class="tasks-list">
-                {% assign tasks_category = tasks | where: "category", category %}
+                {% assign tasks_category = tasks | where: "category", forloop.index0 %}
                 {% for task in tasks_category %}
                 <div class="tasks-item tasks-item-difficulty-{{task.difficult}}">
                     <div class="tasks-item-index"><div>{{forloop.index}}</div></div>
