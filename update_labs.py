@@ -1,5 +1,10 @@
 import sqlite3
-import yaml
+from ruamel.yaml import YAML
+
+yaml = YAML(typ='safe')
+yaml.default_flow_style = False
+yaml.preserve_quotes = True
+yaml.allow_unicode = True
 
 conn = sqlite3.connect('data.db')
 cursor = conn.cursor()
@@ -75,7 +80,12 @@ def fill_yaml_from_db():
             'category_id': categories[category_id]['order'],
         })
 
-    print(labs)
+    out = {}
+    for key, lab in labs.items():
+        out[lab['alias']] = lab
+
+    with open("_data/labs.yml", 'w') as f:
+        yaml.dump(out, f)
 
 
 if __name__ == '__main__':
