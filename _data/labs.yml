@@ -378,6 +378,7 @@ first:
     difficult: 3
     id: 47
   title: №1 Разветвляющийся вычислительный процесс
+  visible: 1
 second:
   alias: second
   categories:
@@ -788,3 +789,4 @@ second:
     difficult: 1
     id: 117
   title: №2 Циклический вычислительный процесс
+  visible: 1

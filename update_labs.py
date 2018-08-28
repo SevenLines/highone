@@ -43,15 +43,16 @@ def fill_db_from_yaml():
 
 
 def fill_yaml_from_db():
-    c = cursor.execute("SELECT id, title, description, alias FROM labs")
+    c = cursor.execute("SELECT id, title, description, alias, visible FROM labs")
     labs = {}
-    for id, title, description, alias in c:
+    for id, title, description, alias, visible in c:
         labs[id] = {
             "id": id,
             "title": title,
             "description": description,
             "alias": alias,
             "tasks": [],
+            "visible": visible,
             "categories": []
         }
 
