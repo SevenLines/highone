@@ -12,6 +12,9 @@ home:
   - href: "/how-to-create-tests.html"
     icon: 'fa fa-bug'
     title: "Как составить таблицу тестов для программы"
+  - href: "/how-to-install-visual-studio.html"
+    icon: 'fa fa-file-code'
+    title: "Как установить Visual Studio"
   - href: "/how-to-create-console-application.html"
     icon: 'fa fa-terminal'
     title: "Как создать простое консольное приложение"
