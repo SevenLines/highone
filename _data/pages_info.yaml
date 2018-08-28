@@ -14,7 +14,7 @@ home:
     title: "Как составить таблицу тестов для программы"
   - href: "/how-to-install-visual-studio.html"
     icon: 'fa fa-file-code'
-    title: "Как установить Visual Studio"
+    title: "Как установить Visual Studio 2017"
   - href: "/how-to-create-console-application.html"
     icon: 'fa fa-terminal'
     title: "Как создать простое консольное приложение"

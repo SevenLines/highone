@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: how-to-install-visual-studio
-title: Как установить Visual Studio
+title: Как установить Visual Studio 2017
 ---
 1) Заходим сюда [https://visualstudio.microsoft.com/ru](https://visualstudio.microsoft.com/ru)
 
@@ -29,7 +29,7 @@ title: Как установить Visual Studio
 
 ![](/assets/images/how_to_install_visual_studio/install_vs_07.png)
 
-8) Ожидаем, так как установочник все подгружает все их интернета, ждать придется часа пол, в зависимости от скорости соединения:
+8) Ожидаем, так как установочник подгружает все из интернета, ждать придется часа пол, в зависимости от скорости соединения:
 
 ![](/assets/images/how_to_install_visual_studio/install_vs_08.png)
  
