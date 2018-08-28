@@ -15,6 +15,46 @@
     }
 }
 
+.home-labs-links, .home-page-links {
+    a {
+        display: block;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.home-labs-links {
+
+    @for $i from 1 to 10 {
+        a:nth-child(#{$i}) {
+            $color: darken(#3057a4, $i * 8);
+            color: $color;
+            &:hover {
+                color: darken($color, 10);
+            }
+        }
+    }
+}
+
+.home-page-links {
+    @for $i from 1 to 10 {
+        a:nth-child(#{$i}) {
+            $color: adjust_hue(blue, $i * 25);
+            color: $color;
+            &:hover {
+                background: linear-gradient(90deg, lighten($color, 40), white);
+                color: darken($color, 10);
+            }
+        }
+    }
+}
+
 .lab-description {
     padding: 1em 0;
     padding-top: 0; 
@@ -68,7 +108,15 @@ body {
     padding-top: 4.5rem;
 }
   
-.navbar-expand-md>.container {
+.page-content {
+    blockquote {
+        border-left: none;
+        color: black;
+        padding-left: 15px;
+        font-size: 0.9em;
+        letter-spacing: normal;
+        font-style: normal;
+    }
 }
 
 
@@ -81,4 +129,13 @@ body {
     .post-list-heading {
         font-size: 1.5em;
     }
+
+    .tasks-list .tasks-item {
+        font-size: 0.9em;
+        .tasks-item-index {
+            padding: 0.25em;
+            flex-basis: 36px;
+        }
+    }
 }
+

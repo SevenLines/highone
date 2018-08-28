@@ -1,0 +1,17 @@
+home:
+  links:
+  - href: "/about-csharp.html"
+    icon: 'fa fa-barcode'
+    title: "Шпаргалка по C#"
+  - href: "/how-to-create-verbose-algorithm.html"
+    icon: 'fa fa-code-branch'
+    title: "Как описать алгоритм своими словами"
+  - href: "/how-to-create-specifications.html"
+    icon: 'fa fa-stream'
+    title: "Как составить таблицу спецификаций для программы"
+  - href: "/how-to-create-tests.html"
+    icon: 'fa fa-bug'
+    title: "Как составить таблицу тестов для программы"
+  - href: "/how-to-create-console-application.html"
+    icon: 'fa fa-terminal'
+    title: "Как создать простое консольное приложение"

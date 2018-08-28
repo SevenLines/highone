@@ -4,26 +4,26 @@ layout: default
 
 <h1>Лабораторные работы</h1>
 
+<div class="home-labs-links">
 {% for lab in site.data.labs %}
     {% if lab[1].visible == 1 %}
-    <a class="post-list-heading" href="labs/{{lab[0]}}.html">
-        {{ lab[1].title }}
-    </a>
     <div>
-        {{lab[1].description}}
+        <a class="post-list-heading" href="labs/{{lab[0]}}.html">
+            {{ lab[1].title }}
+        </a>
+        <div class="d-none d-sm-none d-md-block">
+            {{lab[1].description}}
+        </div>
     </div>
     {% endif %}
 {% endfor %}
+</div>
 
 <p></p>
 <h1>Общие руководства к действию</h1>
 
-<a class="post-list-heading" href="/about-csharp.html"><i class="fa fa-barcode"></i> Шпаргалка по C#</a>
-<br>
-<a class="post-list-heading" href="/how-to-create-verbose-algorithm.html"><i class="fa fa-code-branch"></i> Как описать алгоритм своими словами</a>
-<br>
-<a class="post-list-heading" href="/how-to-create-specifications.html"><i class="fa fa-stream"></i> Как составить таблицу спецификаций для программы</a>
-<br>
-<a class="post-list-heading" href="/how-to-create-tests.html"><i class="fa fa-bug"></i> Как составить таблицу тестов для программы</a>
-<br>
-<a class="post-list-heading" href="/how-to-create-console-application.html"><i class="fa fa-terminal"></i> Как создать простое консольное приложение</a>
+<div class="home-page-links">
+    {% for link in site.data.pages_info.home.links %}
+    <a class="post-list-heading" href="{{link.href}}"><i class="{{link.icon}}"></i> {{link.title}}</a>
+    {% endfor %}
+</div>
