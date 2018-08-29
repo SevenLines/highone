@@ -109,6 +109,7 @@ body {
 }
   
 .page-content {
+    padding-top: 0;
     blockquote {
         border-left: none;
         color: black;
@@ -117,8 +118,68 @@ body {
         letter-spacing: normal;
         font-style: normal;
     }
+    h4 {
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
 }
 
+.algorithm-steps {
+    $indexSize: 35px;
+    display: flex;
+    flex-direction: column;
+    .algorithm-step {
+        display: flex;
+        align-items: center;
+
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+
+        @for $i from 1 to 10 {
+            &:nth-child(#{$i}) {
+                $color: adjust_hue(#d8ff89, $i * 10);
+                background: $color; //linear-gradient(90deg, $color, white);
+                &:hover{
+                    background: lighten($color, 7);
+                }
+                .algorithm-step-index {
+                    color: darken($color, 45);
+                    border: 2px solid darken($color, 30);
+                }
+            }
+        }
+
+        border-radius: $indexSize / 2;
+        margin-bottom: 0.25em;
+        &.algorithm-step-level2 {
+            margin-left: $indexSize / 2;
+        }
+        .algorithm-step-index {
+            margin: 0.25em 0 0.25em 0.25em;
+            display: flex;
+            flex-grow: 0;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            flex-basis: $indexSize;
+            width: $indexSize;
+            height: $indexSize;
+            background-color: white;
+            border-radius: 50%;
+            text-align: center;
+            .inner {
+
+            }
+        }
+        .algorithm-step-description {
+            flex-grow: 1;
+            padding: 0.5em;
+        }
+    }
+}
 
 @media (max-width: 600px)
 {

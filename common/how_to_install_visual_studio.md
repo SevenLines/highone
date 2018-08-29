@@ -5,7 +5,7 @@ title: Как установить Visual Studio 2017
 ---
 1) Заходим сюда [https://visualstudio.microsoft.com/ru](https://visualstudio.microsoft.com/ru)
 
-2) Выбираем скачивание версии **Community 2017**
+2) Выбираем версию **Community 2017**
 
 ![](/assets/images/how_to_install_visual_studio/install_vs_01.png)
 

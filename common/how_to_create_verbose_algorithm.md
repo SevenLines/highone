@@ -4,95 +4,46 @@ permalink: how-to-create-verbose-algorithm
 title: Как описать алгоритм своими словами
 ---
 
+{:toc}
+
 Описываем своими словами, как будто ребенку объясняем.  Так, чтобы даже себе было понятно. Ни каких псведокодов.
 
-## Пример 1
+{% for example in site.data.examples %}
 
-Задача: **Студенты Иванов и Петров за время практики заработали определенную сумму. Кто из них заработал большую сумму? Определить средний заработок.**
+<h2> Пример №{{ forloop.index }} </h2>
 
-#### Словесное описание:
+Задача: <span markdown="1">{{example.object}}</span>
 
-**1.** Заводим переменные под сумму заработанную Ивановым (**ivanovSum**) и Петровым (**petrovSum**)
+<h4>Словесное описание</h4>
 
-**2.** Сравним  два числа **ivanovSum** и **petrovSum**
+<div class="algorithm-steps" markdown="0">
+{% for i in example.steps %}
+    <div class="algorithm-step">
+        <div class="algorithm-step-index">
+            <div class="inner">{{forloop.index}}</div>
+        </div>
+        <span class="algorithm-step-description" markdown="1">{{i.step}}</span>
+    </div>
+     {% if i.steps %}
+        {% assign outer_forloop = forloop %}
+        {% for j in i.steps %}
+        <div class="algorithm-step algorithm-step-level2">
+            <div class="algorithm-step-index">
+                <div class="inner">{{outer_forloop.index}}.{{forloop.index}}</div>
+            </div>
+            <span markdown="1" class="algorithm-step-description">{{j.step}}</span>
+        </div>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</div>
 
-> **2.1.** Если значение **ivanovSum** больше **petrovSum** выведем на экран "Иванов заработал больше".
-
-> **2.2.** Если значение **petrovSum** больше **ivanovSum** выведем на экран "Петров заработал больше".
-
-> **2.3.** Если значение **petrovSum** равно **ivanovSum** выведем на экран "Студенты заработали одинаковое количество денег".
-
-**3.** Рассчитаем среднее арифметичское ivanovSum и petrovSum, сохраним результат в переменную **averageSum**
-
-**4.** Выведем значение **averageSum** на экран
-
-#### Код
-
-{% highlight csharp %}
-var ivanovSum = 20.0;
-var petrovSum = 34.0;
-
-if (ivanovSum > petrovSum)
-{
-    Console.WriteLine("Иванов заработал больше");
-}
-else if (petrovSum > ivanovSum)
-{
-    Console.WriteLine("Петров заработал больше");
-}
-else
-{
-    Console.WriteLine("Студенты заработали одинаковое количество денег");
-}
-
-var averageSum = (petrovSum + ivanovSum) / 2;
-Console.WriteLine(averageSum);
-Console.ReadLine();
-{% endhighlight %}
-
-
-## Пример 2
-
-Задача: **посчитать сумму введенных пользователем чисел.**
-
-#### Словесное описание
-
-**1.** Заводим переменные под список чисел и для хранения ввода пользователя
-
-**2.** Ждем кода пользователь чего-нибудь введет 
-
-> **2.1.** Если пользователь ввел число, то заносим число в список, и повторяем пункт **2**.
-
-> **2.2.** Если пользователь ввел пустую строку, то есть ничего не ввел, то переходим к пункту **3**
-
-**3.** Заводим переменую под сумму, инициализируем ее нулем
-
-**4.** В цикле проходим по всем числа в списке, каждый раз добавля очередной элемент к сумме
-
-**5.** Выводим на экран полученную сумму чисел
-
-#### Код
+<h4> Код </h4>
 
 {% highlight csharp %}
-string inputNumber; // сюда будем фиксировать введенную строку
-var numbers = new List<int>(); // сюда будем заносить числа
-
-while(true) // цикл бесконечный
-{
-    inputNumber = Console.ReadLine(); // забираем данные от пользователя
-    if (string.IsNullOrEmpty(inputNumber)) // если пользователь ничего не ввел то выходим
-    {
-        break;
-    }
-    numbers.Add(int.Parse(inputNumber)); // добавляем число в список
-}
-
-int sum = 0;
-foreach(var value in numbers)
-{
-    sum += value;
-}
-
-Console.WriteLine("Сумма равна: {0}", sum); // выводим сумму чисел на экран
-Console.ReadLine();
+{{example.code}}
 {% endhighlight %}
+
+{% endfor %}
+
+
