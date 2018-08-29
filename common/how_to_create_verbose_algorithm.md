@@ -4,8 +4,6 @@ permalink: how-to-create-verbose-algorithm
 title: Как описать алгоритм своими словами
 ---
 
-{:toc}
-
 Описываем своими словами, как будто ребенку объясняем.  Так, чтобы даже себе было понятно. Ни каких псведокодов.
 
 {% for example in site.data.examples %}
