@@ -10,9 +10,11 @@ title: Как описать алгоритм своими словами
 
 <h2> Пример №{{ forloop.index }} </h2>
 
-Задача: <span markdown="1">{{example.object}}</span>
+<div class="task-description" markdown="0">
+<span class="task-title">Постановка задачи: </span><span class="task-text" markdown="1">{{example.object}}</span>
+</div>
 
-<h4>Словесное описание</h4>
+<h4 class="algorithm-verbose-header">вариант описания:</h4>
 
 <div class="algorithm-steps" markdown="0">
 {% for i in example.steps %}
@@ -36,7 +38,7 @@ title: Как описать алгоритм своими словами
 {% endfor %}
 </div>
 
-<h4> Код </h4>
+<h4 class="algorithm-verbose-code-header">код соответствующий описанию</h4>
 
 {% highlight csharp %}
 {{example.code}}
