@@ -85,7 +85,7 @@ def fill_yaml_from_db():
     for key, lab in labs.items():
         out[lab['alias']] = lab
 
-    with open("_data/labs.yml", 'w') as f:
+    with open("_data/labs.yml", 'w', encoding='utf8') as f:
         yaml.dump(out, f)
 
 
