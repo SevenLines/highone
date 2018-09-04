@@ -56,6 +56,26 @@ def fill_yaml_from_db():
             "categories": []
         }
 
+    c = cursor.execute("SELECT s.id, second_name, first_name, g.title as group_title "
+                       "FROM students s "
+                       "LEFT JOIN groups g ON g.id = s.group_id")
+
+    students = {}
+    for id, second_name, first_name, group_title in c:
+        students[id] = {
+            "id": id,
+            "second_name": second_name,
+            "first_name": first_name,
+            "group_title": group_title,
+        }
+
+    c = cursor.execute("SELECT id, student_id, task_id "
+                       "FROM student_task")
+    task_student = {}
+    for id, student_id, task_id in c:
+        item = task_student.setdefault(task_id, [])
+        item.append(students[student_id])
+
     c = cursor.execute("SELECT id, title, lab_id, `order` "
                        "FROM labs_categories ORDER BY lab_id, `order`")
 
@@ -69,7 +89,7 @@ def fill_yaml_from_db():
         }
         labs[lab_id]['categories'].append(title)
 
-    c = cursor.execute("SELECT id, description, difficult, category_id "
+    c = cursor.execute("SELECT id, description, difficult, category_id  "
                        "FROM tasks ORDER BY id")
 
     for id, description, difficult, category_id in c:
@@ -79,6 +99,7 @@ def fill_yaml_from_db():
             'description': description,
             'difficult': difficult,
             'category_id': categories[category_id]['order'],
+            'students': task_student.get(id, []),
         })
 
     out = {}

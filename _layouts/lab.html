@@ -39,7 +39,19 @@ layout: default
                 {% for task in tasks_category %}
                 <div class="tasks-item tasks-item-difficulty-{{task.difficult}}">
                     <div class="tasks-item-index"><div>{{forloop.index}}</div></div>
-                    <div class="tasks-item-description">{{task.description | markdownify}}</div>
+                    <div class="tasks-item-description">
+                        <div class="text">{{task.description | markdownify}}</div>
+                    </div>
+                    <div class="task-item-students">
+                        {% for s in task.students %}
+                        <div class="task-item-student">
+                            <div class="task-item-student-name">
+                                <div class="">{{s.second_name}} {{s.first_name}}</div>
+                                <div class="task-item-student-group">{{s.group_title}}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
                 {% endfor %}
             </div>

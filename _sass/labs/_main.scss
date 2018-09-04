@@ -1,239 +1,276 @@
-@mixin task($color) {
-  background-color: $color;
-  box-shadow: 0 0 6px lighten($color, 3);
-
-  &:hover {
-    background-color: lighten($color, 3);
-    .tasks-item-index {
-      background-color: lighten($color, 8);
-    }
-  }
-
-  .tasks-item-index {
-    background-color: lighten($color, 5);
-    border-right: 2px solid darken($color, 5);
-  }
-}
-
 .home-labs-links, .home-page-links {
-  a {
-    display: block;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-    &:hover {
-      text-decoration: none;
+    a {
+        display: block;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        &:hover {
+            text-decoration: none;
+        }
     }
-  }
 }
 
 .home-labs-links {
 
-  @for $i from 1 to 10 {
-    a:nth-child(#{$i}) {
-      $color: darken(#3057a4, $i * 8);
-      color: $color;
-      &:hover {
-        color: darken($color, 10);
-      }
+    @for $i from 1 to 10 {
+        a:nth-child(#{$i}) {
+            $color: darken(#3057a4, $i * 8);
+            color: $color;
+            &:hover {
+                color: darken($color, 10);
+            }
+        }
     }
-  }
 }
 
 .home-page-links {
-  @for $i from 1 to 10 {
-    a:nth-child(#{$i}) {
-      $color: adjust_hue(blue, $i * 25);
-      color: $color;
-      &:hover {
-        background: linear-gradient(90deg, lighten($color, 40), white);
-        color: darken($color, 10);
-      }
+    @for $i from 1 to 10 {
+        a:nth-child(#{$i}) {
+            $color: adjust_hue(blue, $i * 25);
+            color: $color;
+            &:hover {
+                background: linear-gradient(90deg, lighten($color, 40), white);
+                color: darken($color, 10);
+            }
+        }
     }
-  }
 }
 
 .lab-description {
-  padding: 1em 0;
-  padding-top: 0;
+    padding: 1em 0;
+    padding-top: 0;
+}
+
+@mixin task($color) {
+    background-color: $color;
+    box-shadow: 0 0 6px lighten($color, 3);
+
+    &:hover {
+        background-color: lighten($color, 3);
+        .tasks-item-index {
+            background-color: lighten($color, 8);
+        }
+    }
+
+    .tasks-item-index {
+        background-color: lighten($color, 5);
+        border-right: 2px solid darken($color, 5);
+    }
+
+    .task-item-students {
+        background-color: lighten($color, 5);
+        .task-item-student {
+            background-color: lighten($color, 25);
+
+            .task-item-student-group {
+                color: darken($color, 65)
+            }
+        }
+    }
 }
 
 .tasks-list {
-  .tasks-item {
-    margin: 0.5em 0;
-    display: flex;
-    align-content: stretch;
+    .tasks-item {
+        margin: 0.5em 0;
+        display: flex;
+        align-content: stretch;
 
-    transition: all 0.3s;
+        transition: all 0.3s;
 
-    .tasks-item-index {
-      transition: all 0.3s;
-      padding: 0.5em;
-      flex-shrink: 0;
-      flex-basis: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        .tasks-item-index {
+            transition: all 0.3s;
+            padding: 0.5em;
+            flex-shrink: 0;
+            flex-basis: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tasks-item-description {
+            transition: all 0.3s;
+            .text {
+                padding: 0.75em;
+            }
+            flex-grow: 1;
+            flex-basis: 0;
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .task-item-students {
+            padding: 0.5em;
+            flex-basis: 150px;
+            align-items: flex-end;
+
+            .task-item-student {
+                align-items: flex-end;
+                justify-content: flex-end;
+                display: flex;
+                flex-shrink: 0;
+                border-radius: 0.3em;
+                padding: 0.15em 0.5em;
+                margin-bottom: 0.5em;
+            }
+            .task-item-student-name {
+                margin-right: 0.5em;
+                font-size: 0.8em;
+                .task-item-student-group {
+                    text-align: right;
+                    font-size: 0.75em;
+                }
+            }
+        }
+
+        &.tasks-item-difficulty-1 {
+            @include task(rgb(217, 255, 160));
+        }
+
+        &.tasks-item-difficulty-2 {
+            @include task(rgb(255, 238, 164));
+        }
+
+        &.tasks-item-difficulty-3 {
+            @include task(rgb(255, 210, 226));
+        }
     }
-
-    .tasks-item-description {
-      transition: all 0.3s;
-      padding: 0.75em;
-      flex-grow: 1;
-      flex-basis: 0;
-      p:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    &.tasks-item-difficulty-1 {
-      @include task(rgb(217, 255, 160));
-    }
-
-    &.tasks-item-difficulty-2 {
-      @include task(rgb(255, 238, 164));
-    }
-
-    &.tasks-item-difficulty-3 {
-      @include task(rgb(255, 210, 226));
-    }
-  }
 }
 
 body {
-  min-height: auto;
-  padding-top: 4.5rem;
+    min-height: auto;
+    padding-top: 4.5rem;
 }
 
 .page-content {
-  padding-top: 0;
-  blockquote {
-    border-left: none;
-    color: black;
-    padding-left: 15px;
-    font-size: 0.9em;
-    letter-spacing: normal;
-    font-style: normal;
-  }
-  h4 {
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-  }
+    padding-top: 0;
+    blockquote {
+        border-left: none;
+        color: black;
+        padding-left: 15px;
+        font-size: 0.9em;
+        letter-spacing: normal;
+        font-style: normal;
+    }
+    h4 {
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
 }
 
 .table-wrapper {
-  max-width: 100%;
-  overflow-x: auto;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .page-content {
-  .task-description {
-    font-size: 1.5em;
-    $color: #fffd8c;
-    padding: 0.5em;
-    background: linear-gradient(90deg, $color, white);
-    .task-text {
-      font-weight: bold;
-    }
-  }
-
-  .algorithm-verbose-header {
-    $color: #d8ff89;
-    margin-bottom: 0.25rem;
-    padding: 0.25em 0.25em 0.5em;
-    color: darken($color, 50);
-    background: linear-gradient(90deg, $color, white);
-    margin-top: 15px;
-  }
-
-  .algorithm-verbose-code-header {
-    $color: #d6d6ff;
-    padding: 0.25em 0.25em 0.5em;
-    margin-bottom: 0.25rem;
-    color: black;
-    background: linear-gradient(90deg, $color, white);
-    margin-top: 15px;
-  }
-
-  .algorithm-steps {
-    $indexSize: 35px;
-    display: flex;
-    flex-direction: column;
-    .algorithm-step {
-      display: flex;
-      align-items: center;
-
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      -ms-transition: all .3s;
-      -o-transition: all .3s;
-      transition: all .3s;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      @for $i from 1 to 10 {
-        &:nth-child(#{$i}) {
-          $color: adjust_hue(#d8ff89, $i * 10);
-          background: $color; //linear-gradient(90deg, $color, white);
-          &:hover {
-            background: lighten($color, 7);
-          }
-          .algorithm-step-index {
-            color: darken($color, 45);
-            border: 2px solid darken($color, 30);
-          }
-        }
-      }
-
-      border-radius: $indexSize / 2;
-      margin-bottom: 0.25rem;
-      &.algorithm-step-level2 {
-        margin-left: $indexSize / 2;
-      }
-      .algorithm-step-index {
-        margin: 0.25em 0 0.25em 0.25em;
-        display: flex;
-        flex-grow: 0;
-        flex-shrink: 0;
-        justify-content: center;
-        align-items: center;
-        flex-basis: $indexSize;
-        width: $indexSize;
-        height: $indexSize;
-        background-color: white;
-        border-radius: 50%;
-        text-align: center;
-        .inner {
-
-        }
-      }
-      .algorithm-step-description {
-        flex-grow: 1;
+    .task-description {
+        font-size: 1.5em;
+        $color: #fffd8c;
         padding: 0.5em;
-      }
+        background: linear-gradient(90deg, $color, white);
+        .task-text {
+            font-weight: bold;
+        }
     }
-  }
+
+    .algorithm-verbose-header {
+        $color: #d8ff89;
+        margin-bottom: 0.25rem;
+        padding: 0.25em 0.25em 0.5em;
+        color: darken($color, 50);
+        background: linear-gradient(90deg, $color, white);
+        margin-top: 15px;
+    }
+
+    .algorithm-verbose-code-header {
+        $color: #d6d6ff;
+        padding: 0.25em 0.25em 0.5em;
+        margin-bottom: 0.25rem;
+        color: black;
+        background: linear-gradient(90deg, $color, white);
+        margin-top: 15px;
+    }
+
+    .algorithm-steps {
+        $indexSize: 35px;
+        display: flex;
+        flex-direction: column;
+        .algorithm-step {
+            display: flex;
+            align-items: center;
+
+            -webkit-transition: all .3s;
+            -moz-transition: all .3s;
+            -ms-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @for $i from 1 to 10 {
+                &:nth-child(#{$i}) {
+                    $color: adjust_hue(#d8ff89, $i * 10);
+                    background: $color; //linear-gradient(90deg, $color, white);
+                    &:hover {
+                        background: lighten($color, 7);
+                    }
+                    .algorithm-step-index {
+                        color: darken($color, 45);
+                        border: 2px solid darken($color, 30);
+                    }
+                }
+            }
+
+            border-radius: $indexSize / 2;
+            margin-bottom: 0.25rem;
+            &.algorithm-step-level2 {
+                margin-left: $indexSize / 2;
+            }
+            .algorithm-step-index {
+                margin: 0.25em 0 0.25em 0.25em;
+                display: flex;
+                flex-grow: 0;
+                flex-shrink: 0;
+                justify-content: center;
+                align-items: center;
+                flex-basis: $indexSize;
+                width: $indexSize;
+                height: $indexSize;
+                background-color: white;
+                border-radius: 50%;
+                text-align: center;
+                .inner {
+
+                }
+            }
+            .algorithm-step-description {
+                flex-grow: 1;
+                padding: 0.5em;
+            }
+        }
+    }
 }
 
 @media (max-width: 600px) {
 
-  h1 {
-    font-size: 1.75em;
-  }
-  .post-list-heading {
-    font-size: 1.5em;
-  }
-
-  .tasks-list .tasks-item {
-    font-size: 0.9em;
-    .tasks-item-index {
-      padding: 0.25em;
-      flex-basis: 36px;
+    h1 {
+        font-size: 1.75em;
     }
-  }
+    .post-list-heading {
+        font-size: 1.5em;
+    }
+
+    .tasks-list .tasks-item {
+        font-size: 0.9em;
+        .tasks-item-index {
+            padding: 0.25em;
+            flex-basis: 36px;
+        }
+    }
 }
 
