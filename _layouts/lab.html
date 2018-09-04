@@ -42,6 +42,7 @@ layout: default
                     <div class="tasks-item-description">
                         <div class="text">{{task.description | markdownify}}</div>
                     </div>
+                    {% if task.students.size > 0 %}
                     <div class="task-item-students">
                         {% for s in task.students %}
                         <div class="task-item-student">
@@ -52,6 +53,7 @@ layout: default
                         </div>
                         {% endfor %}
                     </div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
