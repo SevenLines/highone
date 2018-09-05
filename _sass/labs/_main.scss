@@ -1,3 +1,6 @@
+@import "task";
+
+
 .home-labs-links, .home-page-links {
     a {
         display: block;
@@ -43,102 +46,7 @@
     padding-top: 0;
 }
 
-@mixin task($color) {
-    background-color: $color;
-    box-shadow: 0 0 6px lighten($color, 3);
 
-    &:hover {
-        background-color: lighten($color, 3);
-        .tasks-item-index {
-            background-color: lighten($color, 8);
-        }
-    }
-
-    .tasks-item-index {
-        background-color: lighten($color, 5);
-        border-right: 2px solid darken($color, 5);
-    }
-
-    .task-item-students {
-        background-color: lighten($color, 5);
-        .task-item-student {
-            background-color: lighten($color, 25);
-
-            .task-item-student-group {
-                color: darken($color, 65)
-            }
-        }
-    }
-}
-
-.tasks-list {
-    .tasks-item {
-        margin: 0.5em 0;
-        display: flex;
-        align-content: stretch;
-
-        transition: all 0.3s;
-
-        .tasks-item-index {
-            transition: all 0.3s;
-            padding: 0.5em;
-            flex-shrink: 0;
-            flex-basis: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .tasks-item-description {
-            transition: all 0.3s;
-            .text {
-                padding: 0.75em;
-            }
-            flex-grow: 1;
-            flex-basis: 0;
-            p:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        .task-item-students {
-            padding: 0.5em;
-            flex-basis: 180px;
-            align-items: flex-end;
-
-            .task-item-student {
-                align-items: flex-end;
-                justify-content: flex-end;
-                display: flex;
-                flex-shrink: 0;
-                border-radius: 0.3em;
-                padding: 0.15em 0.5em;
-                margin-bottom: 0.5em;
-            }
-            .task-item-student-name {
-                margin-right: 0.5em;
-                font-size: 0.8em;
-                text-align: right;
-                .task-item-student-group {
-                    text-align: right;
-                    font-size: 0.75em;
-                }
-            }
-        }
-
-        &.tasks-item-difficulty-1 {
-            @include task(rgb(217, 255, 160));
-        }
-
-        &.tasks-item-difficulty-2 {
-            @include task(rgb(255, 238, 164));
-        }
-
-        &.tasks-item-difficulty-3 {
-            @include task(rgb(255, 210, 226));
-        }
-    }
-}
 
 body {
     min-height: auto;
@@ -258,20 +166,11 @@ body {
 }
 
 @media (max-width: 600px) {
-
     h1 {
         font-size: 1.75em;
     }
     .post-list-heading {
         font-size: 1.5em;
-    }
-
-    .tasks-list .tasks-item {
-        font-size: 0.9em;
-        .tasks-item-index {
-            padding: 0.25em;
-            flex-basis: 36px;
-        }
     }
 }
 
