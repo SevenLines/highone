@@ -23,9 +23,13 @@ first:
     id: 1
     students:
     - first_name: Артем
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 11
       second_name: Бакшеев
+    - first_name: Владислав
+      group_title: ИСМб-17-1
+      id: 14
+      second_name: Певцов
   - category_id: 0
     description: "Даны действительные числа $$A, B, C, D$$. Если $$A \\leq B \\leq
       C < D$$, то каждое число \nзаменить наибольшим из них; если $$A > B > C > D$$,
@@ -34,9 +38,13 @@ first:
     id: 2
     students:
     - first_name: Алексей
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 10
       second_name: Останин
+    - first_name: Александр
+      group_title: ИСМб-17-1
+      id: 18
+      second_name: Горбунов
   - category_id: 0
     description: 'Даны действительные числа $$Х, Y$$. Если оба числа отрицательны,
       то каждое число заменить его модулем; если отрицательно только одно из них,
@@ -51,7 +59,7 @@ first:
     id: 3
     students:
     - first_name: Андрей
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 3
       second_name: Исаченко
   - category_id: 0
@@ -65,7 +73,7 @@ first:
     id: 4
     students:
     - first_name: Елена
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 8
       second_name: Митюкова
   - category_id: 0
@@ -80,9 +88,13 @@ first:
     id: 5
     students:
     - first_name: Иван
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 2
       second_name: Горбунов
+    - first_name: Иннокентий
+      group_title: ИСМб-17-1
+      id: 19
+      second_name: Михайлов
   - category_id: 0
     description: "Даны действительные числа $$A, B, C$$. Полностью исследовать\nбиквадратное
       уравнение $$A\\times X^4 + B\\times X^2 + C = 0$$. \nЕсли действительных  корней
@@ -95,9 +107,13 @@ first:
     id: 6
     students:
     - first_name: Иван
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 1
       second_name: Запрудских
+    - first_name: Кирилл
+      group_title: ИСМб-17-1
+      id: 13
+      second_name: Кисилев
   - category_id: 0
     description: 'Среди заданных целых чисел $$k, l, m$$ найти пары кратных.
 
@@ -106,9 +122,13 @@ first:
     id: 7
     students:
     - first_name: Алдар
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 4
       second_name: Базаров
+    - first_name: Светлана
+      group_title: ИСМб-17-1
+      id: 17
+      second_name: Шеметова
   - category_id: 0
     description: "Как известно, число делится на 3 тогда и только тогда, когда сумма
       цифр делится на 3. Проверить этот признак на примере заданного трехзначного
@@ -117,7 +137,7 @@ first:
     id: 8
     students:
     - first_name: Эльвира
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 7
       second_name: Галкова
   - category_id: 0
@@ -129,9 +149,13 @@ first:
     id: 9
     students:
     - first_name: Дугар
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 6
       second_name: Юндунов
+    - first_name: Антон
+      group_title: ИСМб-17-1
+      id: 16
+      second_name: Редчец
   - category_id: 0
     description: 'Дано целое число, лежащее в диапазоне 1–999. Вывести его описание
       вида «четное двузначное число», «нечетное трехзначное число» и т. д.
@@ -141,7 +165,7 @@ first:
     id: 10
     students:
     - first_name: Дмитрий
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 5
       second_name: Каблов
   - category_id: 0
@@ -154,9 +178,13 @@ first:
     id: 11
     students:
     - first_name: Тумэн
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 9
       second_name: Очиров
+    - first_name: Даниил
+      group_title: ИСМб-17-1
+      id: 15
+      second_name: Теслев
   - category_id: 1
     description: "Функция задана в виде графика $$(R = 2)$$: \n\n  ![](/assets/images/labs/first/b_1_image.png)\n\nНаписать
       программу, которая по введенному значению аргумента вычисляет значение функции.\n"
@@ -195,7 +223,7 @@ first:
     id: 16
     students:
     - first_name: Андрей
-      group_title: ИСТбп-17
+      group_title: ИСТбп-17-1
       id: 12
       second_name: Кузнецов
   - category_id: 1
