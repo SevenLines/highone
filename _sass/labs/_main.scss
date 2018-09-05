@@ -103,7 +103,7 @@
 
         .task-item-students {
             padding: 0.5em;
-            flex-basis: 150px;
+            flex-basis: 180px;
             align-items: flex-end;
 
             .task-item-student {
@@ -118,6 +118,7 @@
             .task-item-student-name {
                 margin-right: 0.5em;
                 font-size: 0.8em;
+                text-align: right;
                 .task-item-student-group {
                     text-align: right;
                     font-size: 0.75em;
