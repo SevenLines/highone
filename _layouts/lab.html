@@ -47,10 +47,13 @@ layout: default
                         {% if task.students.size > 0 %}
                         <div class="task-item-students">
                             {% for s in task.students %}
-                            <div class="task-item-student">
+                            <div class="task-item-student {% if s.done_at %}done{% endif %}">
+                                {% if s.done_at %}<div class="done-icon"><i class="fa fa-check-circle"></i></div>{% endif %}
                                 <div class="task-item-student-name">
-                                    <div class="">{{s.second_name}} {{s.first_name}}</div>
-                                    <div class="task-item-student-group">{{s.group_title}}</div>
+                                    <div>
+                                        <div class="">{{s.student.second_name}} {{s.student.first_name}}</div>
+                                        <div class="task-item-student-group">{{s.student.group_title}}</div>
+                                    </div>
                                 </div>
                             </div>
                             {% endfor %}

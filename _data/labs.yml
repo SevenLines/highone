@@ -22,14 +22,18 @@ first:
     difficult: 3
     id: 1
     students:
-    - first_name: Артем
-      group_title: ИСТбп-17-1
-      id: 11
-      second_name: Бакшеев
-    - first_name: Владислав
-      group_title: ИСМб-17-1
-      id: 14
-      second_name: Певцов
+    - done_at: null
+      student:
+        first_name: Артем
+        group_title: ИСТбп-17-1
+        id: 11
+        second_name: Бакшеев
+    - done_at: null
+      student: &id002
+        first_name: Владислав
+        group_title: ИСМб-17-1
+        id: 14
+        second_name: Певцов
   - category_id: 0
     description: "Даны действительные числа $$A, B, C, D$$. Если $$A \\leq B \\leq
       C < D$$, то каждое число \nзаменить наибольшим из них; если $$A > B > C > D$$,
@@ -37,14 +41,18 @@ first:
     difficult: 2
     id: 2
     students:
-    - first_name: Алексей
-      group_title: ИСТбп-17-1
-      id: 10
-      second_name: Останин
-    - first_name: Александр
-      group_title: ИСМб-17-1
-      id: 18
-      second_name: Горбунов
+    - done_at: null
+      student:
+        first_name: Алексей
+        group_title: ИСТбп-17-1
+        id: 10
+        second_name: Останин
+    - done_at: '2018-09-07'
+      student: &id006
+        first_name: Александр
+        group_title: ИСМб-17-1
+        id: 18
+        second_name: Горбунов
   - category_id: 0
     description: 'Даны действительные числа $$Х, Y$$. Если оба числа отрицательны,
       то каждое число заменить его модулем; если отрицательно только одно из них,
@@ -58,10 +66,12 @@ first:
     difficult: 2
     id: 3
     students:
-    - first_name: Андрей
-      group_title: ИСТбп-17-1
-      id: 3
-      second_name: Исаченко
+    - done_at: null
+      student:
+        first_name: Андрей
+        group_title: ИСТбп-17-1
+        id: 3
+        second_name: Исаченко
   - category_id: 0
     description: "Заданы действительные положительные числа $$X, Y, Z$$.\n\n* Выяснить,
       существует ли треугольник с длинами сторон $$Х, Y, Z$$.  \n* Если треугольник
@@ -72,10 +82,12 @@ first:
     difficult: 1
     id: 4
     students:
-    - first_name: Елена
-      group_title: ИСТбп-17-1
-      id: 8
-      second_name: Митюкова
+    - done_at: null
+      student:
+        first_name: Елена
+        group_title: ИСТбп-17-1
+        id: 8
+        second_name: Митюкова
   - category_id: 0
     description: "Даны действительные числа $$A_1, B_1, C_1, A_2, B_2, C_2$$. \nВыяснить,
       верно ли, что $$|A_1\\times B_2 - A_2\\times B_1| \\ge 0.0001$$, и если верно,
@@ -87,14 +99,18 @@ first:
     difficult: 3
     id: 5
     students:
-    - first_name: Иван
-      group_title: ИСТбп-17-1
-      id: 2
-      second_name: Горбунов
-    - first_name: Иннокентий
-      group_title: ИСМб-17-1
-      id: 19
-      second_name: Михайлов
+    - done_at: null
+      student:
+        first_name: Иван
+        group_title: ИСТбп-17-1
+        id: 2
+        second_name: Горбунов
+    - done_at: null
+      student:
+        first_name: Иннокентий
+        group_title: ИСМб-17-1
+        id: 19
+        second_name: Михайлов
   - category_id: 0
     description: "Даны действительные числа $$A, B, C$$. Полностью исследовать\nбиквадратное
       уравнение $$A\\times X^4 + B\\times X^2 + C = 0$$. \nЕсли действительных  корней
@@ -106,14 +122,18 @@ first:
     difficult: 3
     id: 6
     students:
-    - first_name: Иван
-      group_title: ИСТбп-17-1
-      id: 1
-      second_name: Запрудских
-    - first_name: Кирилл
-      group_title: ИСМб-17-1
-      id: 13
-      second_name: Кисилев
+    - done_at: null
+      student:
+        first_name: Иван
+        group_title: ИСТбп-17-1
+        id: 1
+        second_name: Запрудских
+    - done_at: '2018-09-07'
+      student: &id001
+        first_name: Кирилл
+        group_title: ИСМб-17-1
+        id: 13
+        second_name: Кисилев
   - category_id: 0
     description: 'Среди заданных целых чисел $$k, l, m$$ найти пары кратных.
 
@@ -121,14 +141,18 @@ first:
     difficult: 2
     id: 7
     students:
-    - first_name: Алдар
-      group_title: ИСТбп-17-1
-      id: 4
-      second_name: Базаров
-    - first_name: Светлана
-      group_title: ИСМб-17-1
-      id: 17
-      second_name: Шеметова
+    - done_at: null
+      student:
+        first_name: Алдар
+        group_title: ИСТбп-17-1
+        id: 4
+        second_name: Базаров
+    - done_at: '2018-09-07'
+      student: &id007
+        first_name: Светлана
+        group_title: ИСМб-17-1
+        id: 17
+        second_name: Шеметова
   - category_id: 0
     description: "Как известно, число делится на 3 тогда и только тогда, когда сумма
       цифр делится на 3. Проверить этот признак на примере заданного трехзначного
@@ -136,10 +160,12 @@ first:
     difficult: 1
     id: 8
     students:
-    - first_name: Эльвира
-      group_title: ИСТбп-17-1
-      id: 7
-      second_name: Галкова
+    - done_at: null
+      student:
+        first_name: Эльвира
+        group_title: ИСТбп-17-1
+        id: 7
+        second_name: Галкова
   - category_id: 0
     description: 'Даны числа $$x, y$$. Проверить истинность высказывания: «Точка с
       координатами $$(x, y)$$ лежит во второй или третьей координатной четверти».
@@ -148,14 +174,18 @@ first:
     difficult: 1
     id: 9
     students:
-    - first_name: Дугар
-      group_title: ИСТбп-17-1
-      id: 6
-      second_name: Юндунов
-    - first_name: Антон
-      group_title: ИСМб-17-1
-      id: 16
-      second_name: Редчец
+    - done_at: null
+      student:
+        first_name: Дугар
+        group_title: ИСТбп-17-1
+        id: 6
+        second_name: Юндунов
+    - done_at: null
+      student: &id004
+        first_name: Антон
+        group_title: ИСМб-17-1
+        id: 16
+        second_name: Редчец
   - category_id: 0
     description: 'Дано целое число, лежащее в диапазоне 1–999. Вывести его описание
       вида «четное двузначное число», «нечетное трехзначное число» и т. д.
@@ -164,10 +194,12 @@ first:
     difficult: 1
     id: 10
     students:
-    - first_name: Дмитрий
-      group_title: ИСТбп-17-1
-      id: 5
-      second_name: Каблов
+    - done_at: null
+      student:
+        first_name: Дмитрий
+        group_title: ИСТбп-17-1
+        id: 5
+        second_name: Каблов
   - category_id: 0
     description: 'Даны четыре целых числа $$a,b,c,d$$ – соответственно числители и
       знаменатели двух простых дробей. Выдать результат проверки, какое число больше
@@ -177,20 +209,26 @@ first:
     difficult: 2
     id: 11
     students:
-    - first_name: Тумэн
-      group_title: ИСТбп-17-1
-      id: 9
-      second_name: Очиров
-    - first_name: Даниил
-      group_title: ИСМб-17-1
-      id: 15
-      second_name: Теслев
+    - done_at: null
+      student:
+        first_name: Тумэн
+        group_title: ИСТбп-17-1
+        id: 9
+        second_name: Очиров
+    - done_at: '2018-09-07'
+      student: &id003
+        first_name: Даниил
+        group_title: ИСМб-17-1
+        id: 15
+        second_name: Теслев
   - category_id: 1
     description: "Функция задана в виде графика $$(R = 2)$$: \n\n  ![](/assets/images/labs/first/b_1_image.png)\n\nНаписать
       программу, которая по введенному значению аргумента вычисляет значение функции.\n"
     difficult: 3
     id: 12
-    students: []
+    students:
+    - done_at: null
+      student: *id001
   - category_id: 1
     description: "Написать программу, которая определяет, попадает ли точка с заданными
       координатами x, y в область, закрашенную на рисунке серым цветом. \n\n![](/assets/images/labs/first/b_2_image.png)\n"
@@ -213,7 +251,13 @@ first:
       '
     difficult: 2
     id: 15
-    students: []
+    students:
+    - done_at: null
+      student: &id005
+        first_name: Игорь
+        group_title: ИСМб-17-1
+        id: 20
+        second_name: Просветов
   - category_id: 0
     description: 'Определить, пересекаются ли параболы  $$у=аx^2+bx+с$$  и $$у=dx^2+ex$$.
       Если пересекаются, найти точки пересечения.
@@ -222,10 +266,12 @@ first:
     difficult: 2
     id: 16
     students:
-    - first_name: Андрей
-      group_title: ИСТбп-17-1
-      id: 12
-      second_name: Кузнецов
+    - done_at: null
+      student:
+        first_name: Андрей
+        group_title: ИСТбп-17-1
+        id: 12
+        second_name: Кузнецов
   - category_id: 1
     description: 'Пункты $$A, B$$ и $$C$$ находятся на одной прямой, пункт B между
       пунктами $$A$$ и $$C$$. Расстояние между $$A$$ и $$B$$ равно $$L$$. Расстояние
@@ -236,13 +282,17 @@ first:
       '
     difficult: 3
     id: 17
-    students: []
+    students:
+    - done_at: null
+      student: *id002
   - category_id: 1
     description: "Определите, имеет ли решение система  $$ \\begin{cases}\nax + by
       = c \\\\ \ndx + ey = f \\\\ \n\\end{cases} $$. Если имеет, найдите корни.\n"
     difficult: 2
     id: 18
-    students: []
+    students:
+    - done_at: '2018-09-07'
+      student: *id003
   - category_id: 1
     description: "Заданы три точки $$A(a_1,a_2,a_3)$$, $$B(b_1,b_2,b_3)$$ и $$C(c_1,c_2,c_3)$$.
       \ Определить, между какими точками расстояние будет наименьшим. \n"
@@ -279,7 +329,9 @@ first:
       '
     difficult: 1
     id: 23
-    students: []
+    students:
+    - done_at: null
+      student: *id004
   - category_id: 1
     description: "Известны координаты точки $$M(x,y)$$. Определить принадлежит ли
       эта точка одной из прямых $$y=a_1x+b_1$$; $$y=a_2x-b_2$$. \n"
@@ -294,7 +346,9 @@ first:
       '
     difficult: 2
     id: 25
-    students: []
+    students:
+    - done_at: null
+      student: *id005
   - category_id: 1
     description: 'Даны  координаты вершин двух треугольников $$ABC$$ и  $$DFG$$: $$A(a_1,
       a_2)$$, $$B(b_1, b_2)$$, $$C(c_1, c_2)$$, $$D(d_1, d_2)$$, $$F(f_1, f_2)$$,
@@ -312,7 +366,9 @@ first:
       '
     difficult: 2
     id: 27
-    students: []
+    students:
+    - done_at: null
+      student: *id006
   - category_id: 1
     description: 'Определите, какой из квадратов больше: с диагональю $$d$$, с вписанным
       кругом площадью $$S_1$$, с описанным кругом площадью $$S_1$$;
@@ -353,7 +409,9 @@ first:
       '
     difficult: 2
     id: 32
-    students: []
+    students:
+    - done_at: null
+      student: *id007
   - category_id: 1
     description: 'Посылка. Можно ли коробку размером $$a\times b \times c$$ упаковать
       в посылку размером $r \times s \times t$$? "Углом" укладывать нельзя.
@@ -406,7 +464,9 @@ first:
       '
     difficult: 2
     id: 38
-    students: []
+    students:
+    - done_at: null
+      student: *id006
   - category_id: 2
     description: 'Единицы длины пронумерованы следующим образом: 1 — дециметр, 2 —
       километр, 3 — метр, 4 — миллиметр, 5 — сантиметр. Дан номер единицы длины (целое
@@ -416,7 +476,9 @@ first:
       '
     difficult: 2
     id: 39
-    students: []
+    students:
+    - done_at: null
+      student: *id004
   - category_id: 2
     description: 'Единицы массы пронумерованы следующим образом: 1 — килограмм, 2
       — миллиграмм, 3 — грамм, 4 — тонна, 5 — центнер. Дан номер единицы массы (целое
@@ -426,7 +488,9 @@ first:
       '
     difficult: 2
     id: 40
-    students: []
+    students:
+    - done_at: null
+      student: *id005
   - category_id: 2
     description: 'Элементы окружности пронумерованы следующим образом: 1 — радиус
       $$R$$, 2 — диаметр $$D = 2R$$, 3 — длина $$L = 2 \pi R$$, 4 — площадь круга
@@ -436,7 +500,9 @@ first:
       '
     difficult: 2
     id: 41
-    students: []
+    students:
+    - done_at: null
+      student: *id007
   - category_id: 2
     description: 'Элементы равнобедренного прямоугольного треугольника пронумерованы
       следующим образом: 1 — катет $$a$$, 2 — гипотенуза $$c = 2a$$ , 3 — высота $$h$$,
@@ -470,7 +536,9 @@ first:
       '
     difficult: 3
     id: 44
-    students: []
+    students:
+    - done_at: null
+      student: *id002
   - category_id: 2
     description: 'Дано целое число в диапазоне 20–69, определяющее возраст (в годах).
       Вывести описание указанного возраста, обеспечив правильное согласование числа
@@ -480,7 +548,9 @@ first:
       '
     difficult: 3
     id: 45
-    students: []
+    students:
+    - done_at: null
+      student: *id001
   - category_id: 2
     description: 'Дано целое число в диапазоне 100–999. Вывести описание данного числа,
       например: 256 — «двести пятьдесят шесть», 814 — «восемьсот четырнадцать».

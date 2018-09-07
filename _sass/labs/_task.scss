@@ -18,7 +18,9 @@
         background-color: lighten($color, 5);
         .task-item-student {
             background-color: lighten($color, 25);
-
+            &.done {
+                background-color: lighten($color, 10);
+            }
             .task-item-student-group {
                 color: darken($color, 65)
             }
@@ -63,7 +65,7 @@
 
         .task-item-students {
             padding: 0.5em;
-            flex-basis: 180px;
+            flex-basis: 190px;
             align-items: flex-end;
 
             .task-item-student {
@@ -76,6 +78,13 @@
                 margin-bottom: 0.5em;
                 &:last-child {
                     margin-bottom: 0;
+                }
+                .done-icon {
+                    margin-right: auto;
+                    font-size: 0.75em;
+                    color: green;
+                    align-self: center;
+                    padding-right: 0.5em;
                 }
             }
             .task-item-student-name {
@@ -90,7 +99,7 @@
         }
 
         &.tasks-item-difficulty-1 {
-            @include task(rgb(217, 255, 160));
+            @include task(rgb(232, 255, 150));
         }
 
         &.tasks-item-difficulty-2 {
@@ -98,7 +107,7 @@
         }
 
         &.tasks-item-difficulty-3 {
-            @include task(rgb(255, 210, 226));
+            @include task(rgb(255, 220, 194));
         }
     }
 }
@@ -116,7 +125,7 @@
             .task-item-student {
                 float: left;
                 margin-right: 0.5em;
-                &:last-child{
+                &:last-child {
                     margin-bottom: 0.5em;
                 }
             }

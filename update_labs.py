@@ -69,12 +69,15 @@ def fill_yaml_from_db():
             "group_title": group_title,
         }
 
-    c = cursor.execute("SELECT id, student_id, task_id "
+    c = cursor.execute("SELECT id, student_id, task_id, done_at "
                        "FROM student_task")
     task_student = {}
-    for id, student_id, task_id in c:
+    for id, student_id, task_id, done_at in c:
         item = task_student.setdefault(task_id, [])
-        item.append(students[student_id])
+        item.append({
+            "student": students[student_id],
+            "done_at": done_at,
+        })
 
     c = cursor.execute("SELECT id, title, lab_id, `order` "
                        "FROM labs_categories ORDER BY lab_id, `order`")
