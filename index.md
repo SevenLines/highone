@@ -1,30 +1,5 @@
 ---
 layout: home
 title: "Чаинка"
+comments: true
 ---
-
-<h1>Лабораторные работы</h1>
-
-<div class="home-labs-links">
-{% for lab in site.data.labs %}
-    {% if lab[1].visible == 1 %}
-    <div>
-        <a class="post-list-heading" href="labs/{{lab[0]}}.html">
-            {{ lab[1].title }}
-        </a>
-        <div class="d-none d-sm-none d-md-block">
-            {{lab[1].description}}
-        </div>
-    </div>
-    {% endif %}
-{% endfor %}
-</div>
-
-<p></p>
-<h1>Общие руководства к действию</h1>
-
-<div class="home-page-links">
-    {% for link in site.data.pages_info.home.links %}
-    <a class="post-list-heading" href="{{link.href}}"><i class="{{link.icon}}"></i> {{link.title}}</a>
-    {% endfor %}
-</div>

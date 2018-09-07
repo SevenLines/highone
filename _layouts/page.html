@@ -1,8 +1,11 @@
 ---
 layout: default
+comments: true
 ---
 
 <h2>{{page.title}}</h2>
 <div class="page-content">
 {{content}}
 </div>
+
+{%- include disqus.html -%}

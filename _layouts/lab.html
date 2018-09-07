@@ -27,6 +27,7 @@ layout: default
         {% else %}
             <a class="nav-item nav-link" data-toggle="tab" href="#nav-tasks" role="tab">Задачи</a>
         {% endif %}
+        <a class="nav-item nav-link" data-toggle="tab" href="#nav-questions" role="tab">Для вопросов</a>
     </div>
 </nav>
 
@@ -71,6 +72,11 @@ layout: default
         </div>
     </div>
 {% endif %}
+    <div class="tab-pane" id="nav-questions" role="tabpanel">
+        <div class="tasks-list">
+            {%- include disqus.html -%}
+        </div>
+    </div>
 </div>
 
 <script>

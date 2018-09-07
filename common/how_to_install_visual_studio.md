@@ -2,6 +2,7 @@
 layout: page
 permalink: how-to-install-visual-studio
 title: Как установить Visual Studio 2017
+comments: true
 ---
 1) Заходим сюда [https://visualstudio.microsoft.com/ru](https://visualstudio.microsoft.com/ru)
 

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 
 <h1>Лабораторные работы</h1>
@@ -29,3 +30,7 @@ layout: default
     <a class="post-list-heading" href="{{link.href}}"><i class="{{link.icon}}"></i> {{link.title}}</a>
     {% endfor %}
 </div>
+
+<hr style="margin-top: 1em; margin-bottom: 1em">
+
+{%- include disqus.html -%}
