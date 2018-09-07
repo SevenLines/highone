@@ -1,5 +1,16 @@
 @import "task";
 
+body {
+    min-height: auto;
+    padding-top: 0;
+    background-color: #fcfcfc
+}
+
+main.container {
+    padding: 1em;
+    padding-top: 4.5rem;
+    background-color: white;
+}
 
 .home-labs-links, .home-page-links {
     a {
@@ -16,7 +27,6 @@
 }
 
 .home-labs-links {
-
     @for $i from 1 to 10 {
         a:nth-child(#{$i}) {
             $color: darken(#3057a4, $i * 8);
@@ -44,13 +54,6 @@
 .lab-description {
     padding: 1em 0;
     padding-top: 0;
-}
-
-
-
-body {
-    min-height: auto;
-    padding-top: 4.5rem;
 }
 
 .page-content {
