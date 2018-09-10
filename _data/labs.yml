@@ -29,7 +29,7 @@ first:
         id: 11
         second_name: Бакшеев
     - done_at: null
-      student: &id002
+      student: &id004
         first_name: Владислав
         group_title: ИСМб-17-1
         id: 14
@@ -48,7 +48,7 @@ first:
         id: 10
         second_name: Останин
     - done_at: '2018-09-07'
-      student: &id006
+      student: &id014
         first_name: Александр
         group_title: ИСМб-17-1
         id: 18
@@ -66,12 +66,18 @@ first:
     difficult: 2
     id: 3
     students:
-    - done_at: null
-      student:
+    - done_at: '2018-09-10'
+      student: &id003
         first_name: Андрей
         group_title: ИСТбп-17-1
         id: 3
         second_name: Исаченко
+    - done_at: null
+      student: &id006
+        first_name: Дмитрий
+        group_title: ИСТбп-17-1
+        id: 23
+        second_name: Зайцев
   - category_id: 0
     description: "Заданы действительные положительные числа $$X, Y, Z$$.\n\n* Выяснить,
       существует ли треугольник с длинами сторон $$Х, Y, Z$$.  \n* Если треугольник
@@ -82,8 +88,8 @@ first:
     difficult: 1
     id: 4
     students:
-    - done_at: null
-      student:
+    - done_at: '2018-09-10'
+      student: &id010
         first_name: Елена
         group_title: ИСТбп-17-1
         id: 8
@@ -141,14 +147,14 @@ first:
     difficult: 2
     id: 7
     students:
-    - done_at: null
-      student:
+    - done_at: '2018-09-10'
+      student: &id015
         first_name: Алдар
         group_title: ИСТбп-17-1
         id: 4
         second_name: Базаров
     - done_at: '2018-09-07'
-      student: &id007
+      student: &id016
         first_name: Светлана
         group_title: ИСМб-17-1
         id: 17
@@ -160,8 +166,8 @@ first:
     difficult: 1
     id: 8
     students:
-    - done_at: null
-      student:
+    - done_at: '2018-09-10'
+      student: &id007
         first_name: Эльвира
         group_title: ИСТбп-17-1
         id: 7
@@ -174,14 +180,14 @@ first:
     difficult: 1
     id: 9
     students:
-    - done_at: null
-      student:
+    - done_at: '2018-09-10'
+      student: &id008
         first_name: Дугар
         group_title: ИСТбп-17-1
         id: 6
         second_name: Юндунов
     - done_at: null
-      student: &id004
+      student: &id009
         first_name: Антон
         group_title: ИСМб-17-1
         id: 16
@@ -195,7 +201,7 @@ first:
     id: 10
     students:
     - done_at: null
-      student:
+      student: &id002
         first_name: Дмитрий
         group_title: ИСТбп-17-1
         id: 5
@@ -216,7 +222,7 @@ first:
         id: 9
         second_name: Очиров
     - done_at: '2018-09-07'
-      student: &id003
+      student: &id005
         first_name: Даниил
         group_title: ИСМб-17-1
         id: 15
@@ -242,7 +248,9 @@ first:
       '
     difficult: 1
     id: 14
-    students: []
+    students:
+    - done_at: null
+      student: *id002
   - category_id: 1
     description: 'Задана окружность с центром в точке $$x_0, y_0$$ и радиусом $$R$$
       и прямая $$y = ax + b$$. Определить, пересекаются ли прямая и окружность. Если
@@ -253,11 +261,13 @@ first:
     id: 15
     students:
     - done_at: null
-      student: &id005
+      student: &id012
         first_name: Игорь
         group_title: ИСМб-17-1
         id: 20
         second_name: Просветов
+    - done_at: null
+      student: *id003
   - category_id: 0
     description: 'Определить, пересекаются ли параболы  $$у=аx^2+bx+с$$  и $$у=dx^2+ex$$.
       Если пересекаются, найти точки пересечения.
@@ -272,6 +282,12 @@ first:
         group_title: ИСТбп-17-1
         id: 12
         second_name: Кузнецов
+    - done_at: null
+      student: &id011
+        first_name: Руслан
+        group_title: ИСТбп-17-1
+        id: 22
+        second_name: Сбитнев
   - category_id: 1
     description: 'Пункты $$A, B$$ и $$C$$ находятся на одной прямой, пункт B между
       пунктами $$A$$ и $$C$$. Расстояние между $$A$$ и $$B$$ равно $$L$$. Расстояние
@@ -284,7 +300,7 @@ first:
     id: 17
     students:
     - done_at: null
-      student: *id002
+      student: *id004
   - category_id: 1
     description: "Определите, имеет ли решение система  $$ \\begin{cases}\nax + by
       = c \\\\ \ndx + ey = f \\\\ \n\\end{cases} $$. Если имеет, найдите корни.\n"
@@ -292,13 +308,21 @@ first:
     id: 18
     students:
     - done_at: '2018-09-07'
-      student: *id003
+      student: *id005
+    - done_at: null
+      student: &id013
+        first_name: Сергей
+        group_title: ИСТбп-17-1
+        id: 24
+        second_name: Дебелый
   - category_id: 1
     description: "Заданы три точки $$A(a_1,a_2,a_3)$$, $$B(b_1,b_2,b_3)$$ и $$C(c_1,c_2,c_3)$$.
       \ Определить, между какими точками расстояние будет наименьшим. \n"
     difficult: 2
     id: 19
-    students: []
+    students:
+    - done_at: null
+      student: *id006
   - category_id: 0
     description: 'Даны уравнения двух прямых  $$y=a_1x+b_1$$ и $$y=a_2x+b_2$$. Определить,
       пересекаются ли эти прямые, совпадают или параллельны.
@@ -306,7 +330,13 @@ first:
       '
     difficult: 2
     id: 20
-    students: []
+    students:
+    - done_at: null
+      student: &id017
+        first_name: Дарья
+        group_title: ИСТбп-17-1
+        id: 21
+        second_name: Кривоногова
   - category_id: 1
     description: 'Задана точка $$M$$ с координатами $$(x, y)$$.  Определить является
       ли эта точка началом координат или лежит на одной из координатных осей.
@@ -314,14 +344,18 @@ first:
       '
     difficult: 1
     id: 21
-    students: []
+    students:
+    - done_at: null
+      student: *id007
   - category_id: 1
     description: "Дана точка $$M$$ с координатами $$(x, y)$$. Определить является
       ли эта точка началом координат, если нет, то в каком координатном углу она расположена.
       \n"
     difficult: 1
     id: 22
-    students: []
+    students:
+    - done_at: '2018-09-10'
+      student: *id008
   - category_id: 1
     description: 'Заданы точки $$A(x_1,y_1)$$ и $$B(x_2,y_2)$$.  Определить лежат
       ли они на прямой  $$y=ax+b$$.
@@ -331,13 +365,17 @@ first:
     id: 23
     students:
     - done_at: null
-      student: *id004
+      student: *id009
+    - done_at: null
+      student: *id010
   - category_id: 1
     description: "Известны координаты точки $$M(x,y)$$. Определить принадлежит ли
       эта точка одной из прямых $$y=a_1x+b_1$$; $$y=a_2x-b_2$$. \n"
     difficult: 1
     id: 24
-    students: []
+    students:
+    - done_at: null
+      student: *id011
   - category_id: 0
     description: 'Известны уравнения двух прямых  $$y=a_1x+b_1$$ и $$y=a_2x+b_2$$.
       Определить, являются ли эти прямые параллельными или перпендикулярными, если
@@ -348,7 +386,9 @@ first:
     id: 25
     students:
     - done_at: null
-      student: *id005
+      student: *id012
+    - done_at: null
+      student: *id013
   - category_id: 1
     description: 'Даны  координаты вершин двух треугольников $$ABC$$ и  $$DFG$$: $$A(a_1,
       a_2)$$, $$B(b_1, b_2)$$, $$C(c_1, c_2)$$, $$D(d_1, d_2)$$, $$F(f_1, f_2)$$,
@@ -368,7 +408,7 @@ first:
     id: 27
     students:
     - done_at: null
-      student: *id006
+      student: *id014
   - category_id: 1
     description: 'Определите, какой из квадратов больше: с диагональю $$d$$, с вписанным
       кругом площадью $$S_1$$, с описанным кругом площадью $$S_1$$;
@@ -384,7 +424,9 @@ first:
       '
     difficult: 1
     id: 29
-    students: []
+    students:
+    - done_at: null
+      student: *id015
   - category_id: 1
     description: 'Треугольник задан координатами своих вершин на плоскости: $$A(x_a,y_a)$$,
       $$B(x_b,y_b)$$, $$C(x_c,y_c)$$. Определить, является он прямо-, остро- или тупоугольным.
@@ -411,7 +453,9 @@ first:
     id: 32
     students:
     - done_at: null
-      student: *id007
+      student: *id016
+    - done_at: null
+      student: *id017
   - category_id: 1
     description: 'Посылка. Можно ли коробку размером $$a\times b \times c$$ упаковать
       в посылку размером $r \times s \times t$$? "Углом" укладывать нельзя.
@@ -447,14 +491,22 @@ first:
       '
     difficult: 1
     id: 36
-    students: []
+    students:
+    - done_at: null
+      student: *id015
+    - done_at: null
+      student: *id010
   - category_id: 2
     description: Дан номер месяца — целое число в диапазоне 1–12 (1 — январь, 2 —февраль
       и т. д.). Вывести название соответствующего времени года («зима», «весна», «лето»,
       «осень»).
     difficult: 1
     id: 37
-    students: []
+    students:
+    - done_at: null
+      student: *id007
+    - done_at: null
+      student: *id002
   - category_id: 2
     description: 'Арифметические действия над числами пронумерованы следующим образом:
       1 — сложение, 2 — вычитание, 3 — умножение, 4 — деление. Дан номер действия
@@ -466,7 +518,9 @@ first:
     id: 38
     students:
     - done_at: null
-      student: *id006
+      student: *id014
+    - done_at: null
+      student: *id011
   - category_id: 2
     description: 'Единицы длины пронумерованы следующим образом: 1 — дециметр, 2 —
       километр, 3 — метр, 4 — миллиметр, 5 — сантиметр. Дан номер единицы длины (целое
@@ -478,7 +532,9 @@ first:
     id: 39
     students:
     - done_at: null
-      student: *id004
+      student: *id009
+    - done_at: null
+      student: *id003
   - category_id: 2
     description: 'Единицы массы пронумерованы следующим образом: 1 — килограмм, 2
       — миллиграмм, 3 — грамм, 4 — тонна, 5 — центнер. Дан номер единицы массы (целое
@@ -490,7 +546,9 @@ first:
     id: 40
     students:
     - done_at: null
-      student: *id005
+      student: *id012
+    - done_at: null
+      student: *id006
   - category_id: 2
     description: 'Элементы окружности пронумерованы следующим образом: 1 — радиус
       $$R$$, 2 — диаметр $$D = 2R$$, 3 — длина $$L = 2 \pi R$$, 4 — площадь круга
@@ -502,7 +560,9 @@ first:
     id: 41
     students:
     - done_at: null
-      student: *id007
+      student: *id016
+    - done_at: null
+      student: *id013
   - category_id: 2
     description: 'Элементы равнобедренного прямоугольного треугольника пронумерованы
       следующим образом: 1 — катет $$a$$, 2 — гипотенуза $$c = 2a$$ , 3 — высота $$h$$,
@@ -513,7 +573,9 @@ first:
       '
     difficult: 2
     id: 42
-    students: []
+    students:
+    - done_at: null
+      student: *id017
   - category_id: 2
     description: 'Элементы равностороннего треугольника пронумерованы следующим образом:
       1 — сторона a, 2 — радиус $$R_1$$ вписанной окружности ($$R_1 = \frac{a}{2}$$),
@@ -538,7 +600,9 @@ first:
     id: 44
     students:
     - done_at: null
-      student: *id002
+      student: *id004
+    - done_at: null
+      student: *id008
   - category_id: 2
     description: 'Дано целое число в диапазоне 20–69, определяющее возраст (в годах).
       Вывести описание указанного возраста, обеспечив правильное согласование числа
