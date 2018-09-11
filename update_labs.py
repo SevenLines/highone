@@ -43,7 +43,7 @@ def fill_db_from_yaml():
 
 
 def fill_yaml_from_db():
-    c = cursor.execute("SELECT id, title, description, alias, visible FROM labs")
+    c = cursor.execute("SELECT id, title, description, alias, visible FROM labs WHERE discipline_id = 1")
     labs = {}
     for id, title, description, alias, visible in c:
         labs[id] = {
@@ -96,14 +96,15 @@ def fill_yaml_from_db():
                        "FROM tasks ORDER BY id")
 
     for id, description, difficult, category_id in c:
-        lab_id = categories[category_id]['lab_id']
-        labs[lab_id]["tasks"].append({
-            'id': id,
-            'description': description,
-            'difficult': difficult,
-            'category_id': categories[category_id]['order'],
-            'students': task_student.get(id, []),
-        })
+        if category_id in categories:
+            lab_id = categories[category_id]['lab_id']
+            labs[lab_id]["tasks"].append({
+                'id': id,
+                'description': description,
+                'difficult': difficult,
+                'category_id': categories[category_id]['order'],
+                'students': task_student.get(id, []),
+            })
 
     out = {}
     for key, lab in labs.items():
